@@ -1,0 +1,25 @@
+syntax="proto3"
+package MD;
+
+import "proto/fed_message.proto";
+
+message TOB {
+  float a = 1;
+  float b =2;
+  float A =3;
+  float B =4;
+  Exchange exchange = 5;
+  string symbol = 6;
+  SymbolType symbol_type = 6;
+  int64 ts = 7;
+}
+
+
+message StreamTOBRequest {
+  Exchange exchange = 1;
+  string symbol = 2;
+}
+
+service MD {
+  rpc StreamTOB (StreamTOBRequest) returns (stream TOB) {}
+}
