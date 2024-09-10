@@ -1,7 +1,7 @@
 syntax="proto3"
 package MD;
 
-import "proto/fed_message.proto";
+import "sp_proto/fed_message.proto";
 
 message TOB {
   float a = 1;
@@ -10,8 +10,8 @@ message TOB {
   float B =4;
   Exchange exchange = 5;
   string symbol = 6;
-  SymbolType symbol_type = 6;
-  int64 ts = 7;
+  SymbolType symbol_type = 7;
+  int64 ts = 8;
 }
 
 
