@@ -1,22 +1,21 @@
-syntax="proto3"
+syntax="proto3";
+import "fed_messages.proto";
+
 package MD;
-
-import "sp_proto/fed_message.proto";
-
 message TOB {
   float a = 1;
   float b =2;
   float A =3;
   float B =4;
-  Exchange exchange = 5;
+  FedMsg.Exchange exchange = 5;
   string symbol = 6;
-  SymbolType symbol_type = 7;
+  FedMsg.SymbolType symbol_type = 7;
   int64 ts = 8;
 }
 
 
 message StreamTOBRequest {
-  Exchange exchange = 1;
+  FedMsg.Exchange exchange = 1;
   string symbol = 2;
 }
 

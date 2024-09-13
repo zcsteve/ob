@@ -1,10 +1,7 @@
-syntax="proto3"
-package FedMsg;
+syntax = "proto3";package FedMsg;
 
-enum Exchange {
-  DBT = 0;
-}
-
-enum PortfolioName {
-  DBT_SP = 0;
-}
+enum Exchange {  DBT = 0;}
+enum SymbolType {  SPOT = 0;  FUT = 1;  OPT = 2;  PERP = 3;}
+enum PortfolioName {  DBT_SP = 0;}
+enum OrderType {  LIMIT = 0;  MARKET = 1;  CANCEL = 2;  CANCEL_ALL = 3;}
+enum Side {  BUY = 0;  SELL = 1;}
